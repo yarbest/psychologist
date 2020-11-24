@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="keywords", content="психолог, детский психолог, арт-терапия, психологическое консультирования")
+        title Art Psychology
+        link(rel="icon" href="img/fav-icon.png")
+        link(rel="stylesheet" href="css/main.css")
+    body
+        header.header
+            .container
+                .header__body
+                    nav.header__nav
+                        ul.header__list
+                            li.header__list-item
+                                a.header__list-link.header-link(href="#") кто я
+                            li.header__list-item
+                                a.header__list-link.header-link(href="#") направления в работе
+                            li.header__list-item
+                                a.header__list-link.header-link(href="#") методическая копилка
+                    .header__phone.phone
+                        .phone__icon-wrap
+                            svg.phone__icon
+                                use(xlink:href="img/icons.svg#phone")
+                        a.phone__number.header-link(href="tel:+380654467656") +38 (065) 446 76 56
+
+                    .socials
+                        .socials__facebook.facebook
+                            a.socials__link(href="")
+                                .socials__icon-wrap.facebook__icon-wrap
+                                    svg.socials__icon
+                                        use(xlink:href="img/icons.svg#facebook")
+
+        section.hero
+            .container
+                .hero__body
+                    .hero__main
+                        .hero__logo.logo
+                            a.logo__link(href="index.html")
+                                img.logo__image(src="img/logo.jpg")
+                        h1.hero__title 
+                            |Территория развития творческих ресурсов 
+                            br
+                            |с использованием 
+                            span.hero__title-accent АРТ-ТЕРАПИИ
+                        //- p.hero__subtitle Важно всегда делать чуть больше, чем ты себе запланировал.
+                            
+                    .hero__col-2
