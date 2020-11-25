@@ -1,0 +1,30 @@
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+        width: $size;
+        height: $size;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: $background-color;
+    }
+
+    // For Internet Explorer
+    & {
+        scrollbar-face-color: $foreground-color;
+        scrollbar-track-color: $background-color;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        // @include scrollbars(10px, rgb(131, 131, 131), lightgray);
+    }
+    .submenuItems {
+        @include scrollbars(5px, #33cc00, #c1f3c1);
+    }
+}
