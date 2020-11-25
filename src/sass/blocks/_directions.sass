@@ -1,0 +1,35 @@
+.directions
+    // position: relative
+    &::after
+        // content: ""
+        // width: 50%
+        // height: 100%
+        // position: absolute
+        // right: 0
+        // top: 0
+        // border: 1px solid #000
+        
+    &__body
+        padding: 0 20px 
+        min-height: 455px
+        // max-height: 420px
+        overflow: hidden
+        display: flex
+        // align-items: flex-start
+        align-items: center
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            right: 0
+            top: 0
+            width: 50%
+            height: 100%
+            padding: 20px 0
+            background-image: url(../img/family-bg.jpg)
+            background-size: cover
+            background-position: center center
+            background-repeat: no-repeat
+            background-origin: content-box
+    &__list
+        box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15)
