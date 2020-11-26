@@ -11,9 +11,13 @@
         display: flex
         align-items: center
         padding: 10px 20px
+    &__toggle-sidebar
+        display: none
     &__nav
         flex-basis: 550px
         margin-right: auto
+        // &_active
+
     &__list
         display: flex
         justify-content: space-between
@@ -80,3 +84,33 @@
         &:hover
             &::before
                 transform: scale(1)
+
+@media (max-width: 991px)
+    .header
+        &__nav
+            position: absolute
+            z-index: 99
+            top: 62px
+            left: 0
+            width: 100%
+            padding: 20px
+            transition: 0.5s ease
+            transform: translateY(-200%)
+            
+            border-top: 1px solid #c5c5c5
+
+            &_active
+                transform: translateY(0%)
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
+                background-color: #fff
+
+        &__toggle-sidebar
+            display: block
+            margin-right: auto
+
+@media (max-width: 380px)
+    .phone
+        &__icon-wrap
+            margin-right: 5px
+        &__number
+            font-size: 1.6rem

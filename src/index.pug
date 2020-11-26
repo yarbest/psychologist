@@ -11,12 +11,21 @@ html(lang="en")
         header.header
             .container
                 .header__body
+
+                    input(type="checkbox" id="checkbox2" class="checkbox2 visuallyHidden")
+                    label(for="checkbox2" class="header__toggle-sidebar")
+                        .hamburger.hamburger2
+                            span.bar.bar1
+                            span.bar.bar2
+                            span.bar.bar3
+                            span.bar.bar4
+
                     nav.header__nav
                         ul.header__list
                             li.header__list-item
-                                a.header__list-link.header-link(href="#") кто я
+                                a.header__list-link.header-link(href="#about-me") кто я
                             li.header__list-item
-                                a#direction-link.header__list-link.header-link(href="#") направления в работе
+                                a.header__list-link.header-link(href="#directions") направления в работе
                             li.header__list-item
                                 a.header__list-link.header-link(href="#") методическая копилка
                     .header__phone.phone
@@ -25,14 +34,14 @@ html(lang="en")
                                 use(xlink:href="img/icons.svg#phone")
                         a.phone__number.header-link(href="tel:+380654467656") +38 (065) 446 76 56
 
-                    .socials
+                    .socials.header__socials
                         .socials__facebook.facebook
                             a.socials__link(href="")
                                 .socials__icon-wrap.facebook__icon-wrap
                                     svg.socials__icon
                                         use(xlink:href="img/icons.svg#facebook")
 
-        section.hero
+        section.hero#about-me
             .container
                 .hero__body
                     .hero__main

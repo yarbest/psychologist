@@ -1,13 +1,5 @@
 .directions
-    // position: relative
-    &::after
-        // content: ""
-        // width: 50%
-        // height: 100%
-        // position: absolute
-        // right: 0
-        // top: 0
-        // border: 1px solid #000
+
         
     &__body
         padding: 30px 0 
@@ -45,3 +37,11 @@
             text-transform: uppercase
     &__text
         margin-top: 55px
+
+
+@media (max-width: 1199px)
+    .directions
+        &__body
+            padding: 0 20px
+            &::after
+                right: 20px

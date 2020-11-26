@@ -12,10 +12,14 @@
     <header class="header">
       <div class="container">
         <div class="header__body">
+          <input class="checkbox2 visuallyHidden" type="checkbox" id="checkbox2"/>
+          <label class="header__toggle-sidebar" for="checkbox2">
+            <div class="hamburger hamburger2"><span class="bar bar1"></span><span class="bar bar2"></span><span class="bar bar3"></span><span class="bar bar4"></span></div>
+          </label>
           <nav class="header__nav">
             <ul class="header__list">
-              <li class="header__list-item"><a class="header__list-link header-link" href="#">кто я</a></li>
-              <li class="header__list-item"><a class="header__list-link header-link" id="direction-link" href="#">направления в работе</a></li>
+              <li class="header__list-item"><a class="header__list-link header-link" href="#about-me">кто я</a></li>
+              <li class="header__list-item"><a class="header__list-link header-link" href="#directions">направления в работе</a></li>
               <li class="header__list-item"><a class="header__list-link header-link" href="#">методическая копилка</a></li>
             </ul>
           </nav>
@@ -26,7 +30,7 @@
               </svg>
             </div><a class="phone__number header-link" href="tel:+380654467656">+38 (065) 446 76 56</a>
           </div>
-          <div class="socials">
+          <div class="socials header__socials">
             <div class="socials__facebook facebook"><a class="socials__link" href="">
                 <div class="socials__icon-wrap facebook__icon-wrap">
                   <svg class="socials__icon">
@@ -37,7 +41,7 @@
         </div>
       </div>
     </header>
-    <section class="hero">
+    <section class="hero" id="about-me">
       <div class="container">
         <div class="hero__body">
           <div class="hero__main">

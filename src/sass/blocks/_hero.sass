@@ -29,7 +29,6 @@
             font-weight: 700
             font-style: italic
 
-    &__image-wrap
         
     &__image
         flex-basis: 200px
@@ -88,3 +87,72 @@
             &:hover
                 transform: scale(1.02)
                 box-shadow: 0px 0 10px 5px rgba(0, 0, 0, 0.15)
+
+@media (max-width: 991px)
+    .hero
+        &__body
+            
+        &__main
+            max-width: none
+            flex-basis: 30%
+        &__image
+            flex-basis: 30%
+        &__about
+            flex-basis: 30%
+    .logo
+
+@media (max-width: 767px)
+    .hero
+        &__body
+            flex-wrap: wrap
+        &__main
+            // border: 1px solid #000
+            flex-basis: 40%
+        &__about
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            flex-basis: 100%
+            margin-top: 20px
+            
+            // border: 1px solid #000
+        &__image
+            // border: 1px solid #000
+            margin-right: 15%
+
+            flex-basis: 150px
+    .logo
+        &__image
+            max-width: 100%
+
+@media (max-width: 575px)
+    .hero
+        &__body
+        &__main
+            flex-basis: 80%
+            margin: 0 auto
+            margin-bottom: 20px
+        &__image
+            // margin: 0 auto
+            flex-basis: 70%
+            margin: 0 auto
+        &__about
+            align-items: center
+            margin-bottom: 20px
+
+@media (max-width: 480px)
+    .hero
+        &__body
+        &__main
+            flex-basis: 100%
+            text-align: center
+
+        &__title
+            font-size: 1.8rem
+    .logo
+        &__image
+            display: inline-block
+            max-width: 80%
+    .hero-about
+        &__name
+            text-align: center

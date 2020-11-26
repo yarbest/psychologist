@@ -1,39 +1,26 @@
-const directionLink = document.querySelector("#direction-link");
+// Открытие меню----------------------------------------------------------------------------
+let toggleSidebar = document.querySelector(".header__toggle-sidebar");
+let sidebar = document.querySelector(".header__nav ");
+let body = document.querySelector("body");
 
-directionLink.addEventListener("click", () => {
-    document.querySelector(".directions").scrollIntoView({ behavior: "smooth" });
+toggleSidebar.addEventListener("click", () => {
+    sidebar.classList.toggle("header__nav_active");
+    // body.classList.toggle("lock-scroll");
 });
+// Открытие меню----------------------------------------------------------------------------
 
-// SMOOTH SCROLL к конкретным точкам----------------------------------------------------------------------------
-var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
-    V = 1; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
-for (var i = 0; i < linkNav.length; i++) {
-    linkNav[i].addEventListener(
-        "click",
-        function (e) {
-            //по клику на ссылку
-            e.preventDefault(); //отменяем стандартное поведение
-            var w = window.pageYOffset, // производим прокрутка прокрутка
-                hash = this.href.replace(/[^#]*(.*)/, "$1"); // к id элемента, к которому нужно перейти
-            (t = document.querySelector(hash).getBoundingClientRect().top), // отступ от окна браузера до id
-                (start = null);
-            requestAnimationFrame(step); // подробнее про функцию анимации [developer.mozilla.org]
-            function step(time) {
-                if (start === null) start = time;
-                var progress = time - start,
-                    r = t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t);
-                window.scrollTo(0, r);
-                if (r != w + t) {
-                    requestAnimationFrame(step);
-                } else {
-                    location.hash = hash; // URL с хэшем
-                }
-            }
-        },
-        false
-    );
-}
-// SMOOTH SCROLL к конкретным точкам----------------------------------------------------------------------------
+$("body").on("click", '[href*="#"]', function (e) {
+    var fixed_offset = 62;
+
+    if ($(window).width() < 991) {
+        var fixed_offset = 100;
+        //добавляем дополнительный отступ из-за шапки, которая появляется на < 991
+    }
+    $("html,body")
+        .stop()
+        .animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
+    e.preventDefault();
+});
 
 // Accordion------------------------------------------------------------------
 $(function () {
@@ -65,7 +52,7 @@ $(function () {
 });
 // Accordion------------------------------------------------------------------
 
-//Плавная прокрутка на сайте всего------------------------------------------------------------------
+//Плавная прокрутка на сайте всего (не трогай)------------------------------------------------------------------
 SmoothScroll({
     // Время скролла 400 = 0.4 секунды
     animationTime: 800,
