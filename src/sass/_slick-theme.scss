@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 /* Slider */
 .slick-loading .slick-list {
-    background: #fff url("../img/portfolio__slider/ajax-loader.gif") center center no-repeat;
+    background: #fff url("../img/certificates/ajax-loader.gif") center center no-repeat;
 }
 
 /* Dots */
@@ -65,5 +65,11 @@
 @media (min-width: 1199px) {
     .slick-dots li:hover button::after {
         background-image: url("../img/certificates/black-circle.png");
+    }
+}
+
+@media (max-width: 575px) {
+    .slick-dots {
+        display: none !important;
     }
 }
