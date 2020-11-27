@@ -2455,6 +2455,7 @@ body {
 
 @media (max-width: 767px) {
   .certificates__body {
+    border-bottom: 1px solid #b6b6b6;
     border-radius: 0;
   }
 }
@@ -2468,5 +2469,8 @@ body {
 @media (max-width: 480px) {
   .certificates__slider-arrows {
     margin-top: 20px;
+  }
+  .certificates__title {
+    margin-bottom: 20px;
   }
 }
