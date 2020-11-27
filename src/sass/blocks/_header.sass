@@ -21,7 +21,11 @@
     &__list
         display: flex
         justify-content: space-between
+        &-item
+            &:not(:last-child)
+                margin-right: 20px
         &-link
+            white-space: nowrap
             display: block
             text-transform: uppercase
             font-weight: 700
@@ -29,6 +33,7 @@
             -webkit-background-clip: text
             -webkit-text-fill-color: transparent
             transition: 0.5s ease
+            
     &__phone
         margin-right: 20px
 .phone
@@ -94,6 +99,7 @@
             left: 0
             width: 100%
             padding: 20px
+            padding-bottom: 10px
             transition: 0.5s ease
             transform: translateY(-200%)
             
@@ -103,11 +109,20 @@
                 transform: translateY(0%)
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2)
                 background-color: #fff
-
+        &__list
+            justify-content: center
+            flex-wrap: wrap
+            &-item
+                margin-bottom: 10px
         &__toggle-sidebar
             display: block
             margin-right: auto
 
+@media (max-width: 767px)
+    .header
+        &__list
+            &-link
+                font-size: 1.4rem
 @media (max-width: 380px)
     .phone
         &__icon-wrap

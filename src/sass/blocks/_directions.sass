@@ -42,6 +42,41 @@
 @media (max-width: 1199px)
     .directions
         &__body
-            padding: 0 20px
+            padding: 40px 20px 20px
+            align-items: center
+            justify-content: center
+            min-height: 470px
             &::after
-                right: 20px
+                // right: 20px
+                width: 100%
+                height: 100%
+                z-index: -1
+                background-size: cover
+                background-position: center bottom
+        &__text
+            margin-top: 0
+            background-color: #ffffffbb
+            border-radius: 20px
+            padding: 20px
+        &__title
+            text-align: center
+
+@media (max-width: 800px)
+    .directions
+        &__body
+            min-height: 550px
+
+@media (max-width: 480px)
+    .directions
+        &__body
+            min-height: 590px
+
+        &__title
+            font-size: 2rem
+
+@media (max-width: 380px)
+    .directions
+        &__text
+            padding: 10px
+        &__title
+            margin-bottom: 15px

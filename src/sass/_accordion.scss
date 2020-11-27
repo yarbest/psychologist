@@ -105,3 +105,23 @@
 li.open .submenuItems {
     // display: flex !important;
 }
+@media (max-width: 1199px) {
+    .accordion-menu {
+        max-width: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdownlink span {
+        font-size: 1.8rem;
+    }
+    .submenuItems li {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .dropdownlink {
+        padding: 10px 30px 10px 10px;
+    }
+}
