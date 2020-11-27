@@ -65,11 +65,15 @@
     .directions
         &__body
             min-height: 550px
+            &::after
+                background-position: left bottom
 
 @media (max-width: 480px)
     .directions
         &__body
             min-height: 590px
+            &::after
+                background-position: left -90px bottom
 
         &__title
             font-size: 2rem

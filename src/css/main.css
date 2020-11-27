@@ -916,11 +916,17 @@ body {
   .directions__body {
     min-height: 550px;
   }
+  .directions__body::after {
+    background-position: left bottom;
+  }
 }
 
 @media (max-width: 480px) {
   .directions__body {
     min-height: 590px;
+  }
+  .directions__body::after {
+    background-position: left -90px bottom;
   }
   .directions__title {
     font-size: 2rem;
