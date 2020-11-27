@@ -9,6 +9,7 @@ toggleSidebar.addEventListener("click", () => {
 });
 // Открытие меню----------------------------------------------------------------------------
 
+//Плавная прокрутка по ЯКОРЯМ ---------------------------------------------------------------
 $("body").on("click", '[href*="#"]', function (e) {
     var fixed_offset = 62;
 
@@ -21,6 +22,7 @@ $("body").on("click", '[href*="#"]', function (e) {
         .animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
     e.preventDefault();
 });
+//Плавная прокрутка по ЯКОРЯМ ---------------------------------------------------------------
 
 // Accordion------------------------------------------------------------------
 $(function () {
@@ -81,3 +83,37 @@ SmoothScroll({
     touchpadSupport: true,
 });
 //Плавная прокрутка на сайте всего------------------------------------------------------------------
+
+$(document).ready(function () {
+    //slider------------------------------------------------------------------
+    $(".certificates-slider").slick({
+        prevArrow: $(".slider-arrows__prev"), //назначаем кастомные стрелки на роль переключателей слайдера
+        nextArrow: $(".slider-arrows__next"),
+        infinite: false,
+        dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    });
+    //slider------------------------------------------------------------------
+});

@@ -1,0 +1,47 @@
+.certificates
+    &__body
+        padding: 40px 0
+    &__slider-arrows
+        margin: 0 auto
+        margin-top: 70px
+        max-width: 120px
+
+.certificates-slider
+    &__item
+        display: flex !important
+        justify-content: center
+        flex-basis: 300px
+        margin-right: 10px    
+        img 
+            max-width: 100%
+            max-height: 100%
+            max-height: 260px
+            // animation-name: fadeInUp
+            // animation-duration: 1.3s 
+
+//slider's arrows
+.slider-arrows
+    display: flex 
+    justify-content: space-between
+    &__arrow
+        width: 45px
+        height: 25px
+        cursor: pointer
+        transition: 0.5s
+        &:not(.slick-disabled):hover
+            transform: scale(1.1)
+        &.slick-arrow
+            background-size: 100%
+            background-position: 0px -10px
+        &.slick-disabled
+            background-size: 100% !important
+            background-position: 0px -10px !important 
+            cursor: default     
+    &__prev
+        background: url("../img/certificates/left-arrow.svg") no-repeat
+        &.slick-disabled
+            background: url("../img/certificates/left-arrow_disabled.svg")
+    &__next
+        background: url("../img/certificates/right-arrow.svg") no-repeat
+        &.slick-disabled
+            background: url("../img/certificates/right-arrow_disabled.svg")
