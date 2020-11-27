@@ -1387,7 +1387,7 @@ body.compensate-for-scrollbar {
 .slick-track:before,
 .slick-track:after {
   display: table;
-  content: '';
+  content: "";
 }
 
 .slick-track:after {
@@ -1405,7 +1405,7 @@ body.compensate-for-scrollbar {
   min-height: 1px;
 }
 
-[dir='rtl'] .slick-slide {
+[dir="rtl"] .slick-slide {
   float: right;
 }
 
@@ -1753,6 +1753,7 @@ body {
   background-color: #fff;
   -webkit-box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 
 .hero__main {
@@ -2058,13 +2059,37 @@ body {
 }
 
 .certificates__body {
-  padding: 40px 0;
+  padding: 70px 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.certificates__title {
+  margin-bottom: 40px;
+  background: -webkit-linear-gradient(45deg, #00CC00 33%, #33CC00 66%, #00FF00);
+  background: -o-linear-gradient(45deg, #00CC00 33%, #33CC00 66%, #00FF00);
+  background: linear-gradient(45deg, #00CC00 33%, #33CC00 66%, #00FF00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .certificates__slider-arrows {
   margin: 0 auto;
   margin-top: 70px;
   max-width: 120px;
+}
+
+.certificates-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .certificates-slider__item {
@@ -2074,15 +2099,19 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-preferred-size: 300px;
-      flex-basis: 300px;
-  margin-right: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 260px;
+  padding: 0 10px;
 }
 
 .certificates-slider__item img {
+  display: block;
   max-width: 100%;
   max-height: 100%;
-  max-height: 260px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .slider-arrows {
