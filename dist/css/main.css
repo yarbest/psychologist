@@ -1589,14 +1589,13 @@ html {
     font-size: 62.5%;
 }
 
-.no-webp body {
+body {
     background-image: url("../img/bg-main.jpg");
 }
 
 body {
     font-family: "ProximaNova";
     font-size: 1.6rem;
-    background-repeat: no-repeat;
     background-size: cover;
     color: #333333;
 }
@@ -1634,14 +1633,9 @@ html {
     font-size: 62.5%;
 }
 
-.no-webp body {
-    background-image: url("../img/bg-main.jpg");
-}
-
 body {
     font-family: "ProximaNova";
     font-size: 1.6rem;
-    background-repeat: no-repeat;
     background-size: cover;
     color: #333333;
 }
@@ -1935,13 +1929,17 @@ body {
 }
 
 .about-me__body {
-    padding: 70px 0;
+    padding: 70px 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
 }
 
 .about-me__image-wrap {
@@ -1996,10 +1994,6 @@ body {
 
 .certificates__body {
     padding: 70px 20px;
-    background-color: #fff;
-    -webkit-box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
 }
 
 .certificates__title {
@@ -2180,6 +2174,10 @@ body {
         max-width: none;
     }
 
+    .hero {
+        margin-bottom: 20px;
+    }
+
     .hero__body {
         padding-bottom: 40px;
     }
@@ -2212,6 +2210,10 @@ body {
 
     .directions__title {
         text-align: center;
+    }
+
+    .about-me {
+        margin-top: 20px;
     }
 
     .about-me__body {
@@ -2532,6 +2534,10 @@ body {
     .directions__title {
         margin-bottom: 15px;
     }
+
+    .certificates__title {
+        margin-bottom: 0;
+    }
 }
 
 @media all and (max-height: 576px) {
@@ -2578,14 +2584,6 @@ body {
 
 .webp .slick-dots li.slick-active button::after {
     background-image: url(../img/certificates/black-circle.webp);
-}
-
-.webp body {
-    background-image: url(../img/bg-main.webp);
-}
-
-.webp {
-    background-image: url(../img/bg-main.webp);
 }
 
 .webp .hero__image {

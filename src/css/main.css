@@ -1628,7 +1628,6 @@ body {
   font-family: "ProximaNova";
   font-size: 1.6rem;
   background-image: url("../img/bg-main.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
   color: #333333;
 }
@@ -1673,7 +1672,6 @@ body {
   font-family: "ProximaNova";
   font-size: 1.6rem;
   background-image: url("../img/bg-main.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
   color: #333333;
 }
@@ -2021,6 +2019,9 @@ body {
 }
 
 @media (max-width: 1199px) {
+  .hero {
+    margin-bottom: 20px;
+  }
   .hero__body {
     padding-bottom: 40px;
   }
@@ -2219,13 +2220,17 @@ body {
 }
 
 .about-me__body {
-  padding: 70px 0;
+  padding: 70px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
 }
 
 .about-me__image-wrap {
@@ -2279,6 +2284,9 @@ body {
 }
 
 @media (max-width: 1199px) {
+  .about-me {
+    margin-top: 20px;
+  }
   .about-me__body {
     padding: 60px 20px;
   }
@@ -2354,10 +2362,6 @@ body {
 
 .certificates__body {
   padding: 70px 20px;
-  background-color: #fff;
-  -webkit-box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 10px;
 }
 
 .certificates__title {
@@ -2478,5 +2482,11 @@ body {
   }
   .certificates__title {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .certificates__title {
+    margin-bottom: 0;
   }
 }
