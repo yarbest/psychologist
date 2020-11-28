@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html(lang="en")
+html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -8,7 +8,8 @@ html(lang="en")
         link(rel="icon" href="img/fav-icon.png")
         link(rel="stylesheet" href="css/main.css")
     body
-        //- pug -w . -o ./ -P
+        //- cd src
+        //- pug -w index.pug -o ./ -P
         header.header
             .container
                 .header__body
@@ -30,13 +31,13 @@ html(lang="en")
                             li.header__list-item
                                 a.header__list-link.header-link(href="#certificates") сертификаты
                             li.header__list-item
-                                a.header__list-link.header-link(href="#") методическая копилка
+                                a.header__list-link.header-link(href="#arttherapy") об арт-терапии
                                 
                     .header__phone.phone
                         .phone__icon-wrap
                             svg.phone__icon
                                 use(xlink:href="img/icons.svg#phone")
-                        a.phone__number.header-link(href="tel:+380654467656") +38 (065) 446 76 56
+                        a.phone__number.header-link(href="tel:+380665342550") +38 (066) 534 25 50
 
                     .socials.header__socials
                         .socials__facebook.facebook
@@ -51,7 +52,7 @@ html(lang="en")
                     .hero__main
                         .hero__logo.logo
                             a.logo__link(href="index.html")
-                                img.logo__image(src="img/logo.jpg")
+                                img.logo__image(src="img/logo.jpg" alt="logo")
                         h1.hero__title 
                             |Территория развития психологических ресурсов личности 
                             |с использованием 
@@ -115,7 +116,7 @@ html(lang="en")
             .container
                 .about-me__body
                     .about-me__image-wrap
-                        img.about-me__image(src="img/workplace.jpg")
+                        img.about-me__image(src="img/workplace.jpg" alt="workplace")
                     .about-me__text
                         h2.about-me__title Здравствуйте, я рада, что Вы зашли на мой сайт, надеюсь здесь вам будет уютно и познавательно.
                         .about-me__detail.detail-about
@@ -132,14 +133,12 @@ html(lang="en")
 
                         p.about-me__description Если ваши отношения с ребенком переживают кризис, вы можете позвонить и прийти ко мне на встречу вместе, и я буду делать все от себя зависящее для того, чтобы вы смогли понять и услышать друг друга лучше, ведь вопрос взаимопонимания между родителями и детьми актуален всегда.
 
-        secrion#certificates.certificates
+        section#certificates.certificates
             .container
                 .certificates__body
                     h2.certificates__title Сертификаты
 
                     .certificates__slider.certificates-slider
-                        a(data-fancybox="certificates" href="img/certificates/certificate-2.jpg" class="certificates-slider__item")
-                            img(src="img/certificates/certificate-2.jpg" alt="certificate-2")
                         
                         a(data-fancybox="certificates" href="img/certificates/certificate-3.jpg" class="certificates-slider__item")
                             img(src="img/certificates/certificate-3.jpg" alt="certificate-3")
@@ -152,7 +151,10 @@ html(lang="en")
 
                         a(data-fancybox="certificates" href="img/certificates/certificate-9.jpg" class="certificates-slider__item")
                             img(src="img/certificates/certificate-9.jpg" alt="certificate-9")
-                        
+
+                        a(data-fancybox="certificates" href="img/certificates/certificate-2.jpg" class="certificates-slider__item")
+                            img(src="img/certificates/certificate-2.jpg" alt="certificate-2")
+
                         a(data-fancybox="certificates" href="img/certificates/certificate-10.jpg" class="certificates-slider__item")
                             img(src="img/certificates/certificate-10.jpg" alt="certificate-10")
                         
@@ -177,6 +179,19 @@ html(lang="en")
                     .certificates__slider-arrows.slider-arrows
                         .slider-arrows__prev.slider-arrows__arrow
                         .slider-arrows__next.slider-arrows__arrow
+
+        section#arttherapy.arttherapy
+            .container
+                .arttherapy__body
+                    h2.arttherapy__title
+                    .arttherapy__image-wrap
+                        //- img.arttherapy__image(src="img/arttherapy")
+                    
+                    .arttherapy__text
+                        p Арт-терапия   – это один из методов психологической помощи, увлекательный, эффективный, основанный на творчестве и игре. Именно творчество даёт человеку возможность выразить себя, а значит – понять свои желания и устремления.
+                        p Дети сталкиваются с серьезными трудностями: в семье, в детском саду, в школе, в общении. Взрослые не всегда знают, как помочь своему ребенку. Объяснения, убеждения и нравоучения не помогают, а сам малыш не может толком объяснить, что с ним происходит. Например, не хочет идти в детский сад или школу, капризничает по любому поводу, боится оставаться в темноте, переживает кризисные периоды. В этих и многих других случаях и нужна арт-терапия. Она поможет мягко и аккуратно обойти защитные механизмы, понять, что беспокоит ребенка и помочь справится с трудностями.
+                        p Дети открыты для изменений. Они с удовольствием входят в роли персонажей сказок, рисуют, лепят из глины, создают «Свой Мир» на песке – в специальной юнгианской песочнице, одним словом – творят. Они верят в то, что они делают, верят в себя. И это очень эффективно. В достижении успеха -вера очень важна. 
+                        p Арт-терапия и детская психология – очень эффективное сочетание, такой синтез весьма популярен во всем мире благодаря творческой форме и высокой результативности. 
 
 
 
