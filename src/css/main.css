@@ -2252,6 +2252,19 @@ body {
   margin-bottom: 30px;
 }
 
+.about-me__title-accent {
+  font-weight: 700;
+  font-size: 2.5rem;
+  font-style: italic;
+  background: -webkit-linear-gradient(45deg, #00CC00 33%, #33CC00 66%, #00FF00);
+  background: -o-linear-gradient(45deg, #00CC00 33%, #33CC00 66%, #00FF00);
+  background: linear-gradient(45deg, #00CC00 33%, #33CC00 66%, #00FF00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .about-me__description {
   margin-top: 20px;
   font-size: 2rem;
@@ -2320,9 +2333,16 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 20px;
     height: calc(100vw / 2.8);
   }
@@ -2335,6 +2355,9 @@ body {
   .about-me__title {
     font-size: 2rem;
     height: calc(100vw / 2.2);
+  }
+  .about-me__title-accent {
+    font-size: 2rem;
   }
   .about-me__image-wrap {
     width: 60%;
@@ -2401,7 +2424,21 @@ body {
   font-size: 2rem;
 }
 
-.arttherapy__text p:not(:last-child) {
+.arttherapy__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  font-style: italic;
+  background: -webkit-linear-gradient(45deg, #00CC00 33%, #33CC00 66%, #00FF00);
+  background: -o-linear-gradient(45deg, #00CC00 33%, #33CC00 66%, #00FF00);
+  background: linear-gradient(45deg, #00CC00 33%, #33CC00 66%, #00FF00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.arttherapy__title p:not(:last-child) {
   margin-bottom: 20px;
 }
 

@@ -16,6 +16,15 @@
     &__title
         font-size: 2.5rem
         margin-bottom: 30px
+        &-accent
+            font-weight: 700
+            font-size: 2.5rem
+            font-style: italic
+            background: linear-gradient(45deg, #00CC00 33%, #33CC00 66%, #00FF00)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            text-transform: uppercase
+            text-align: center
 
     &__detail
     &__description
@@ -57,12 +66,16 @@
             margin-right: 20px
             margin-bottom: 20px
 
+// @media (max-width: 900px)
+
 @media (max-width: 767px)
     .about-me
         background-color: #fff
         &__title
             display: flex
+            flex-direction: column
             align-items: center
+            justify-content: center
             margin-bottom: 20px
             // height: 220px
             height: calc(100vw / 2.8)
@@ -74,6 +87,8 @@
         &__title
             font-size: 2rem
             height: calc(100vw / 2.2)
+            &-accent
+                font-size: 2rem
         &__image-wrap
             width: 60%
         &__description
