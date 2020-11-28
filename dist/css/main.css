@@ -1589,7 +1589,7 @@ html {
     font-size: 62.5%;
 }
 
-body {
+.no-webp body {
     background-image: url("../img/bg-main.jpg");
 }
 
@@ -1631,6 +1631,10 @@ body {
 
 html {
     font-size: 62.5%;
+}
+
+.no-webp body {
+    background-image: url("../img/bg-main.jpg");
 }
 
 body {
@@ -1961,6 +1965,19 @@ body {
     margin-bottom: 30px;
 }
 
+.about-me__title-accent {
+    font-weight: 700;
+    font-size: 2.5rem;
+    font-style: italic;
+    background: -webkit-linear-gradient(45deg, #00cc00 33%, #33cc00 66%, #00ff00);
+    background: -o-linear-gradient(45deg, #00cc00 33%, #33cc00 66%, #00ff00);
+    background: linear-gradient(45deg, #00cc00 33%, #33cc00 66%, #00ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 .about-me__description {
     margin-top: 20px;
     font-size: 2rem;
@@ -1990,6 +2007,68 @@ body {
 
 .detail-about__text {
     font-size: 2rem;
+}
+
+.arttherapy__body {
+    position: relative;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.no-webp .arttherapy__body::before {
+    background-image: url(../img/bg-arttherapy.jpg);
+}
+
+.arttherapy__body::before {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.arttherapy__text {
+    position: relative;
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%;
+    padding: 20px;
+    background-color: #ffffffbb;
+    -webkit-box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0 20px 5px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    color: #000000;
+    font-size: 2rem;
+}
+
+.arttherapy__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 2.5rem;
+    font-style: italic;
+    background: -webkit-linear-gradient(45deg, #00cc00 33%, #33cc00 66%, #00ff00);
+    background: -o-linear-gradient(45deg, #00cc00 33%, #33cc00 66%, #00ff00);
+    background: linear-gradient(45deg, #00cc00 33%, #33cc00 66%, #00ff00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.arttherapy__title p:not(:last-child) {
+    margin-bottom: 20px;
 }
 
 .certificates__body {
@@ -2229,6 +2308,11 @@ body {
         -ms-flex-preferred-size: 55%;
         flex-basis: 55%;
     }
+
+    .arttherapy__text {
+        -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    }
 }
 
 @media (max-width: 991px) {
@@ -2370,15 +2454,28 @@ body {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         margin-bottom: 20px;
         height: calc(100vw / 2.8);
     }
 
     .about-me__image-wrap {
         width: 50%;
+    }
+
+    .arttherapy__text {
+        -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+        font-size: 1.8rem;
     }
 
     .certificates__body {
@@ -2435,6 +2532,10 @@ body {
         height: calc(100vw / 2.2);
     }
 
+    .about-me__title-accent {
+        font-size: 2rem;
+    }
+
     .about-me__image-wrap {
         width: 60%;
     }
@@ -2444,6 +2545,10 @@ body {
     }
 
     .detail-about__text {
+        font-size: 1.6rem;
+    }
+
+    .arttherapy__text {
         font-size: 1.6rem;
     }
 
@@ -2503,6 +2608,11 @@ body {
 
     .about-me__title {
         height: auto;
+    }
+
+    .arttherapy__text {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     }
 
     .certificates__slider-arrows {
@@ -2586,12 +2696,20 @@ body {
     background-image: url(../img/certificates/black-circle.webp);
 }
 
+.webp {
+    background-image: url(../img/bg-main.jpg);
+}
+
 .webp .hero__image {
     background-image: url(../img/woman-min.webp);
 }
 
 .webp .directions__body::after {
     background-image: url(../img/family-bg.webp);
+}
+
+.webp .arttherapy__body::before {
+    background-image: url(../img/bg-arttherapy.webp);
 }
 
 @media (min-width: 1199px) {
